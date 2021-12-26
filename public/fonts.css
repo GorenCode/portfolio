@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url("/public/OpenSans-VariableFont_wdth\,wght.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url("/public/PlayfairDisplay-VariableFont_wght.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
