@@ -12,7 +12,7 @@ import apptimizerEx from '../public/images/apptimizerEx.png';
 import react from '../public/images/react.png';
 import ReduxLogo from '../public/images/ReduxLogo.png';
 import sass from '../public/images/sass.png';
-import StyledComponents from '../public/images/StyledComponents.png';
+// import StyledComponents from '../public/images/StyledComponents.png';
 import JSLogo from '../public/images/JSLogo.png';
 import Nextjs from '../public/images/Nextjs.png';
 import css from '../public/images/css.png';
@@ -45,7 +45,7 @@ export const images = {
     react: react.src,
     ReduxLogo: ReduxLogo.src,
     sass: sass.src,
-    StyledComponents: StyledComponents.src,
+    // StyledComponents: StyledComponents.src,
     JSLogo: JSLogo.src,
     Nextjs: Nextjs.src,
     css: css.src,
