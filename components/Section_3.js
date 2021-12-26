@@ -34,7 +34,7 @@ const Section_3 = () => {
                 <motion.div
                     animate={inView ? 'visible' : 'hidden'}
                     variants={variants}
-                    transition={{ duration: 1, ease: 'easeOut' }}
+                    transition={{ duration: 1.5, ease: 'easeOut' }}
                     ref={ref}
                     
                 >
@@ -75,7 +75,7 @@ const Section_3 = () => {
                 <motion.div
                     animate={inView ? 'visible' : 'hidden'}
                     variants={variants}
-                    transition={{ duration: 2, ease: 'easeOut' }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
                     ref={ref}
                     
                 >
@@ -107,8 +107,17 @@ const Container = styled.div`
 const ContainerText = styled.div`
     /* z-index: 1; */
     
-    @media (max-width: 375px) {
-        
+
+    @media (max-width: 440px) {
+        display: flex;
+        align-self: center;
+        padding: 0px 0% 0px 0px;
+    }
+
+    @media (max-width: 321px) {
+        display: flex;
+        align-self: end;
+        padding: 0px 5% 0px 0px;
     }
 `;
 

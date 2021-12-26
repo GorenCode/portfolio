@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors, images} from '../constants/style';
+import { useInView } from 'react-intersection-observer';
 
 import {
     useViewportScroll,
@@ -10,6 +11,22 @@ import {
 
 
 const Section_2 = () => {
+
+    const [ref, inView, entry] = useInView({
+        /* Optional options */
+        threshold: 0.5,
+        triggerOnce: false
+    });
+
+
+    const variants = {
+    visible: { opacity: 1, scale: 1, y: 0 },
+    hidden: {
+        opacity: 0,
+        scale: 0.65,
+        y: 50
+    }
+    };
 
     const { scrollY } = useViewportScroll();
     const y1 = useTransform(scrollY, [0, 1800], [100, 500]);
@@ -37,18 +54,32 @@ const Section_2 = () => {
             </ContainerImagesTop>
             <TextContainer>
                 <Title>
+                    <motion.div
+                        animate={inView ? 'visible' : 'hidden'}
+                        variants={variants}
+                        transition={{ duration: 0.7, ease: 'easeOut' }}
+                        ref={ref}
+                    >
                     <TitleBigTop>
                       I am a  
                     </TitleBigTop>
                     <TitleBig>
                         programmer 
                     </TitleBig>
+                    </motion.div>
+                    <motion.div
+                        animate={inView ? 'visible' : 'hidden'}
+                        variants={variants}
+                        transition={{ duration: 1.1, ease: 'easeOut' }}
+                        ref={ref}
+                    >
                     <TitleMove>
                         currently specialized in Vanilla JavaScript, 
                     </TitleMove>
                     <TitleMove>
                         Sass, Styled Components, Next.js, React and Redux.
                     </TitleMove>
+                    </motion.div>
                 </Title> 
             </TextContainer>
 
@@ -130,8 +161,6 @@ const TitleBig = styled.div`
         font-size: 32px;
         padding: 0% 0% 2% 9%;
     }
-
-
 `;
 
 const TitleMove = styled.div`
@@ -236,6 +265,11 @@ const StyleJs = styled.div`
 const StyledCss = styled.img`
     width: 50px;
     height: 60px;
+
+    @media (max-width: 440px) {
+        width: 40px;
+        height: 50px;
+    }
 `;
 
 const StyledHtml = styled.img`

@@ -74,8 +74,8 @@ const Container = styled.div`
     }
 
     @media (max-width: 440px) {
-        height: 780px;
-        padding: 30% 5% 0% 25%;
+        height: fit-content;
+        padding: 30% 5% 10% 25%;
     }
 `;
 

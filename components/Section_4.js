@@ -41,6 +41,7 @@ const Container = styled.div`
     @media (max-width: 440px) {
         flex-direction: column;
         padding: 0px 0px 0px 0px;
+        height: 70vh;
     }
 
 `;
@@ -74,7 +75,7 @@ const TitleMove = styled.div`
 
 const ContainerImage = styled.div`
     @media (max-width: 440px) {
-        display: contents; 
+        display: contents;
     }
    
 `;
@@ -92,27 +93,21 @@ const ContainerImage2 = styled.div`
 
 
 const SomeImageCode1 = styled.img`
-    /* height: 600px;
-    width: 100%; */
-
     height: 400px;
     width: fit-content;
 
     @media (max-width: 375px) {
-        height: 46%;
-        width: fit-content;
+        height: fit-content;
+        width: auto;
     }
 `;
 
 const SomeImageCode2 = styled.img`
-    /* height: 600px;
-    width: 100%; */
-
     height: 400px;
     width: fit-content;
 
-    @media (max-width: 375px) {
+    @media (max-width: 440px) {
         height: 46%;
-        width: fit-content;
+        width: auto;
     }
 `;

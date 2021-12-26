@@ -1,21 +1,57 @@
 import styled from "styled-components";
 import { colors, images } from '../constants/style';
+import { useInView } from 'react-intersection-observer';
+import {
+    useViewportScroll,
+    motion,
+    useTransform,
+  } from 'framer-motion';
 
 
 const Section_1 = () => {
+
+    const [ref, inView, entry] = useInView({
+        /* Optional options */
+        threshold: 0.5,
+        triggerOnce: false
+    });
+
+
+    const variants = {
+    visible: { opacity: 1, scale: 1, y: 0 },
+    hidden: {
+        opacity: 0,
+        scale: 0.65,
+        y: 50
+    }
+    };
     
     return (
         <Container>
             <Title>
+                <motion.div
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={variants}
+                    transition={{ duration: 0.7, ease: 'easeOut' }}
+                    ref={ref}
+                >
                 <SmallText>
                     I am   
                 </SmallText>
+                </motion.div>
+                <motion.div
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={variants}
+                    transition={{ duration: 1, ease: 'easeOut' }}
+                    ref={ref}
+                >
                 <TitleBig>
                     Tamir 
                     <TitleMove>
                         Goren
                     </TitleMove>
                 </TitleBig>
+                </motion.div>
             </Title>
             <ImageContainer>
              <ImageTamir src={images.tamirImage} />   
