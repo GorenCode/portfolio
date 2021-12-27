@@ -1,10 +1,42 @@
 import styled from "styled-components";
 import { colors, images } from '../constants/style';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 
 
 const SectionContact = () => {
+
+    const button = {
+        hidden: {
+            x: -10,
+            opacity: 0
+        },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                delay: 0.5
+            }
+        }
+    }
+
+    const button2 = {
+        hidden: {
+            x: -10,
+            opacity: 0
+        },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                delay: 0.7
+            }
+        }
+    }
+
+
+
     return (
         <Container>
             <Text>
@@ -17,7 +49,11 @@ const SectionContact = () => {
                     the academic thoretical mathemathics I decided to leave my 
                     school and start working for agencies and companies developing their websites as a freelancer.
 
-                    Now, after quiet a few projects, I feel as if it is time for me to 
+                    Now, I started my own company that specializes in developing web app 
+                    designing and marketing called VOODOO Studios, my partner and I had gained 
+                    lots of experience and fun in the process but now it's time for me to 
+                    integrate back into a new family. after quiet a few projects, I feel as 
+                    if it is time for me to 
                     get back to that experience who got me so excited in the first place 
                     and look for a company to work for as a full-time employee. I’m 
                     looking for a place where I can be a part of a team with which I 
@@ -33,12 +69,24 @@ const SectionContact = () => {
                 </TextHighlight>
             </Text>
             <ContactButtons>
-                <Link target="_blank" href="https://www.linkedin.com/in/tamir-goren-bab509197/" rel="noopener noreferrer" passHref>
-                    <Linkedin src={images.linkedinImage} />
-                </Link>
-                <Link href="mailto:tamir.code@gmail.com" target="_blank" rel="noopener noreferrer" passHref>
-                    <EmailButton>CONTACT ME</EmailButton>   
-                </Link>
+                <motion.div
+                        variants={button}
+                        animate="visible"
+                        initial="hidden"
+                    >
+                    <Link target="_blank" href="https://www.linkedin.com/in/tamir-goren-bab509197/" rel="noopener noreferrer" passHref>
+                        <Linkedin src={images.linkedinImage} />
+                    </Link>
+                </motion.div>
+                <motion.div
+                        variants={button2}
+                        animate="visible"
+                        initial="hidden"
+                    >
+                    <Link href="mailto:tamir.code@gmail.com" target="_blank" rel="noopener noreferrer" passHref>
+                        <EmailButton>CONTACT ME</EmailButton>   
+                    </Link>
+                </motion.div>
                 
             </ContactButtons>
         </Container>

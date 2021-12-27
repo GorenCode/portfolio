@@ -43,18 +43,42 @@ const Section_3 = () => {
             </ContainerImageLeft>
             <ContainerText>
                 <Title>
+                    <motion.div
+                        animate={inView ? 'visible' : 'hidden'}
+                        variants={variants}
+                        transition={{ duration: 0.7, ease: 'easeOut' }}
+                        ref={ref}
+                        
+                    >
                     I love
+                    </motion.div>
                     <TitleBig>
                         coding 
                         <Normal>
+                            <motion.div
+                            animate={inView ? 'visible' : 'hidden'}
+                            variants={variants}
+                            transition={{ duration: 0.7, ease: 'easeOut' }}
+                            ref={ref}
+                            
+                            >
                             solving problems and
+                            </motion.div>
                         </Normal>
                         <TitleMove>
                             collaborating
                             
                         </TitleMove>
                         <TitleMoveSmall> 
+                            <motion.div
+                            animate={inView ? 'visible' : 'hidden'}
+                            variants={variants}
+                            transition={{ duration: 0.7, ease: 'easeOut' }}
+                            ref={ref}
+                            
+                            >
                                 with new people.
+                            </motion.div>
                         </TitleMoveSmall>
                     </TitleBig>
                 </Title>
@@ -134,7 +158,7 @@ const TitleBig = styled.div`
     font-size: 42px;
     font-weight: bold;
 
-    @media (max-width: 375px) {
+    @media (max-width: 440px) {
         font-size: 32px;
     }
 `;
@@ -149,6 +173,11 @@ const Normal = styled.div`
     padding-left: 20px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
+
+
+    @media (max-width: 440px) {
+        font-size: 12px;
+    }
 `;
 
 const TitleMoveSmall = styled.div`
@@ -156,6 +185,11 @@ const TitleMoveSmall = styled.div`
     padding-left: 60px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
+
+
+    @media (max-width: 440px) {
+        font-size: 12px;
+    }
 `;
 
 

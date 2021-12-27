@@ -1,21 +1,77 @@
 import styled from "styled-components";
 import { colors, images} from '../constants/style';
+import { useInView } from 'react-intersection-observer';
+import {
+    useViewportScroll,
+    motion,
+    useTransform,
+  } from 'framer-motion';
 
 
 const Section_4 = () => {
+
+    const [ref, inView, entry] = useInView({
+        /* Optional options */
+        threshold: 0.5,
+        triggerOnce: false
+    });
+
+
+    const variants = {
+    visible: { opacity: 1, scale: 1, y: 0 },
+    hidden: {
+        opacity: 0,
+        scale: 0.65,
+        y: 50
+    }
+    };
+
+
     return (
         <Container>
             <ContainerImage>
                <SomeImageCode1 src={images.codeCover1} /> 
             </ContainerImage>
             <Title>
+                <motion.div
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={variants}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    ref={ref}
+                    
+                >
                 And I am always looking to
+                </motion.div>
                 <TitleBig>
+                    <motion.div
+                        animate={inView ? 'visible' : 'hidden'}
+                        variants={variants}
+                        transition={{ duration: 0.7, ease: 'easeOut' }}
+                        ref={ref}
+                        
+                    >
                     learn new things 
+                    </motion.div>
                     <TitleMove>
+                        <motion.div
+                        animate={inView ? 'visible' : 'hidden'}
+                        variants={variants}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
+                        ref={ref}
+                        
+                        >
                         and
+                        </motion.div>
                     </TitleMove>
+                    <motion.div
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={variants}
+                    transition={{ duration: 0.7, ease: 'easeOut' }}
+                    ref={ref}
+                    
+                    >   
                     create new amazing projects
+                    </motion.div>
                 </TitleBig>
             </Title>
             <ContainerImage2>
@@ -54,6 +110,10 @@ const Title = styled.div`
     color: ${colors.primary};
 
     position: absolute;
+
+    @media (max-width: 440px) {
+        font-size: 12px;
+    }
 `;
 
 const TitleBig = styled.div`
@@ -70,6 +130,10 @@ const TitleMove = styled.div`
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
+
+    @media (max-width: 440px) {
+        font-size: 12px;
+    }
 `;
 
 

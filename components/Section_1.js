@@ -25,6 +25,7 @@ const Section_1 = () => {
         y: 50
     }
     };
+
     
     return (
         <Container>
