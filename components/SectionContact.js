@@ -43,7 +43,7 @@ const SectionContact = () => {
                 <TextAbout>
                     <TextBig>After </TextBig>
                     2 years of being a computer sciences student in the College of Management Academic,
-                    I’ve stumbled upon an opportunity
+                    I&apos;ve stumbled upon an opportunity
                     to take part in an actual development process with a real company. 
                     Realizing how much I enjoy developing actual products and software over 
                     the academic thoretical mathemathics I decided to leave my 
