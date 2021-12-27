@@ -55,7 +55,7 @@ const SectionContact = () => {
                     integrate back into a new family. after quiet a few projects, I feel as 
                     if it is time for me to 
                     get back to that experience who got me so excited in the first place 
-                    and look for a company to work for as a full-time employee. I’m 
+                    and look for a company to work for as a full-time employee. I&apos;m 
                     looking for a place where I can be a part of a team with which I 
                     will be able to create amazing software, tools, sites and products 
                     far beyond the ones a developer can create on his own. and of 
