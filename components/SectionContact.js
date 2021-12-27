@@ -51,7 +51,7 @@ const SectionContact = () => {
 
                     Now, I started my own company that specializes in developing web app 
                     designing and marketing called VOODOO Studios, my partner and I had gained 
-                    lots of experience and fun in the process but now it's time for me to 
+                    lots of experience and fun in the process but now it&apos;s time for me to 
                     integrate back into a new family. after quiet a few projects, I feel as 
                     if it is time for me to 
                     get back to that experience who got me so excited in the first place 
