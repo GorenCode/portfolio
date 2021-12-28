@@ -155,18 +155,26 @@ const Container = styled.div`
 
     width: 100%;
 
-
     @media (max-width: 1024px) {
-        padding: 25% 0px 100px 0px;
+        padding: 25% 20px 100px 0px;
+        align-items: center;
+    }
+
+
+    @media (max-width: 890px) {
+        padding: 25% 40px 100px 0px;
+        align-items: flex-end;
     }
 
     @media (max-width: 600px) {
         padding: 90px 20px 100px 20px;
+        align-items: center;
         
     }
 
     @media (max-width: 440px) {
-        padding: 30% 20px 100px 20px;
+        padding: 20% 20px 100px 20px;
+        align-items: end;
         
     }
     
@@ -183,7 +191,9 @@ const ActiveContainer = styled.div`
     }
 
     @media (max-width: 440px) {
-       align-items: end;
+
+       align-items: flex-start;
+        max-width: 276px;
     }
 `;
 
@@ -195,7 +205,7 @@ const Title = styled.div`
     align-self: flex-start;
 
     @media (max-width: 600px) {
-        padding: 0px 0px 40px 80px;
+        /* padding: 0px 0px 40px 80px; */
     }
 
 `;
