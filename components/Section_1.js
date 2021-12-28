@@ -83,6 +83,11 @@ const Container = styled.div`
         flex-direction: column;
         overflow: hidden;
     }
+
+    @media (max-width: 320px) {
+        height: 60vh;
+    }
+    
 `;
 
 const Title = styled.div`
@@ -129,9 +134,19 @@ const ImageTamir = styled.img`
     margin-right: auto;
     
     width: 500px;
-    height:500px;
+    height: 500px;
+
+    @media (max-width: 740px) {
+        margin-left: 40%;
+
+        width: 420px;
+        height: 420px;
+        top: 160px;
+    }
 
     @media (max-width: 440px) {
+        margin-left: auto;
+        
         width: 420px;
         height: 420px;
         top: 160px;
@@ -139,7 +154,7 @@ const ImageTamir = styled.img`
     @media (max-width: 320px) {
         width: 368px;
         height: 350px;
-        top: 105px;
+        top: 165px;
     }
 
 `;

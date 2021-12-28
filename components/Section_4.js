@@ -160,6 +160,11 @@ const SomeImageCode1 = styled.img`
     height: 400px;
     width: fit-content;
 
+    @media (max-width: 440px) {
+        height: 290px;
+        width: auto;
+    }
+
     @media (max-width: 375px) {
         height: fit-content;
         width: auto;
