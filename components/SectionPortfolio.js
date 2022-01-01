@@ -111,8 +111,8 @@ const SectionPortfolio = () => {
                                 animate="visible"
                                 initial="hidden"
                             >
-                            <Link target="_blank" href="https://apptimizer.net/" rel="noopener noreferrer" passHref>
-                                <Apptimizer src={images.apptimizer}/> 
+                            <Link target="_blank" href="https://voodstudio.com/" rel="noopener noreferrer" passHref>
+                                <Voodoo src={images.voodoo}/> 
                             </Link>
                         </motion.div>
                     </BoxPortfolio>
@@ -156,25 +156,34 @@ const Container = styled.div`
     width: 100%;
 
     @media (max-width: 1024px) {
-        padding: 25% 20px 100px 0px;
-        align-items: center;
+        padding: 100px 20px 100px 0px;
+        /* align-items: center; */
     }
 
 
     @media (max-width: 890px) {
-        padding: 25% 40px 100px 0px;
+        /* padding: 25% 40px 100px 0px; */
         align-items: flex-end;
     }
 
-    @media (max-width: 600px) {
-        padding: 90px 20px 100px 20px;
+    @media (max-width: 768px) {
+
         align-items: center;
+    }
+
+    @media (max-width: 690px) {
+        /* padding: 90px 20px 100px 20px; */
         
     }
 
-    @media (max-width: 440px) {
-        padding: 20% 20px 100px 20px;
+    @media (max-width: 487px) {
         align-items: end;
+        
+    }
+
+    @media (max-width: 360px) {
+        padding: 100px 0% 100px 0px;
+
         
     }
     
@@ -187,10 +196,10 @@ const ActiveContainer = styled.div`
     align-items: start;
 
     @media (max-width: 600px) {
-       align-items: center;
+       /* align-items: center; */
     }
 
-    @media (max-width: 440px) {
+    @media (max-width: 570px) {
 
        align-items: flex-start;
         max-width: 276px;
@@ -218,7 +227,7 @@ const TitleBig = styled.div`
 
     color: ${colors.primary};
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         font-size: 32px;
         line-height: 28px;
         padding-bottom: 20px;
@@ -230,7 +239,7 @@ const TitleSmall = styled.div`
     font-family: 'Open Sans', sans-serif;
     color: ${colors.primary};
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         font-size: 12px;
     }
 `;
@@ -251,7 +260,7 @@ const ContainerBox = styled.div`
     column-gap: 30px;
     row-gap: 30px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         display: flex;
         flex-direction: column;
         /* align-items: center; */
@@ -272,7 +281,7 @@ const ContainerBox2 = styled.div`
 
     padding-top: 30px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         display: flex;
         flex-direction: column;
 
@@ -316,7 +325,7 @@ const CyberSafe = styled.img`
     
 
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         background-image: url(${images.cyberSafeSize});
 
         width: 260px;
@@ -352,7 +361,7 @@ const Vpn = styled.img`
     }
 
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         width: 260px;
         height: 130px;
     }
@@ -383,7 +392,7 @@ const Volition = styled.img`
     }
 
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         width: 260px;
         height: 130px;
     }
@@ -392,7 +401,7 @@ const Volition = styled.img`
 
 
 
-const Apptimizer = styled.img`
+const Voodoo = styled.img`
     
     border-radius: 10px;
     transition: box-shadow 0.3s ease-in-out;
@@ -416,7 +425,7 @@ const Apptimizer = styled.img`
         height: auto;  
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         width: 260px;
         height: 130px;
 

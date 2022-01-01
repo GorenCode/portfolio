@@ -255,6 +255,8 @@ const StyleJs = styled.div`
     display: flex;
     flex-flow: column-reverse;
 
+    z-index: 1;
+
     @media (max-width: 440px) {
         font-size: 26px;
         width: 50px;

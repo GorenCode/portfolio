@@ -36,7 +36,7 @@ const Container = styled.div`
     position: fixed;
     display: flex;
     align-items: center;
-    z-index: 1;
+    z-index: 10;
     font-family: 'Open Sans', sans-serif;
 
     @media (max-width: 440px) {

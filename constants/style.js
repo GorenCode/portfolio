@@ -32,6 +32,7 @@ import codeCover2 from '../public/images/codeCover2.jpeg';
 import cyberSafeMobile from '../public/images/cyberSafeMobile.png';
 import cyberSafeSize from '../public/images/cyberSafeSize.png';
 import volitionMobile from '../public/images/volitionMobile.png';
+import voodoo from '../public/images/voodoo.png';
 
 export const images = {
     tamirImage: tamirImage.src,
@@ -63,6 +64,7 @@ export const images = {
     reduxColor: reduxColor.src,
     cssColor: cssColor.src,
     htmlColor: htmlColor.src,
+    voodoo: voodoo.src,
 };
 
 export const colors = {

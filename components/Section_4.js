@@ -92,7 +92,11 @@ const Container = styled.div`
 
     overflow: hidden;
 
-    padding: 0px 120px 0px 140px;
+    /* padding: 0px 120px 0px 140px; */
+
+    @media (max-width: 1025px) {
+        /* padding: 0px 20% 0px 20%; */
+    }
 
     @media (max-width: 440px) {
         flex-direction: column;
@@ -120,6 +124,7 @@ const TitleBig = styled.div`
     font-size: 42px;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
+    z-index: 1;
 
     @media (max-width: 440px) {
         font-size: 32px;
@@ -138,6 +143,7 @@ const TitleMove = styled.div`
 
 
 const ContainerImage = styled.div`
+
     @media (max-width: 440px) {
         display: contents;
     }
@@ -147,6 +153,9 @@ const ContainerImage = styled.div`
 const ContainerImage2 = styled.div`
     display: inline-block;
     align-self: flex-end;
+
+    overflow: hidden;
+
 
 
     @media (max-width: 440px) {
