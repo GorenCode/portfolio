@@ -226,6 +226,7 @@ const Container = styled.div`
 
     @media (max-width: 487px) {
         align-items: end;
+        align-items: flex-end;
         
     }
 
