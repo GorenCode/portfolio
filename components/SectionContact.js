@@ -159,6 +159,7 @@ const TextHighlight = styled.div`
 
 const ContactButtons = styled.div`
     align-self: self-end;
+    align-self: flex-end;
     display: flex;
     align-items: center;
     width: 230px;
