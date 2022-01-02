@@ -33,6 +33,11 @@ import cyberSafeMobile from '../public/images/cyberSafeMobile.png';
 import cyberSafeSize from '../public/images/cyberSafeSize.png';
 import volitionMobile from '../public/images/volitionMobile.png';
 import voodoo from '../public/images/voodoo.png';
+import alma from '../public/images/alma.png';
+import bambiDesk from '../public/images/bambiDesk.png';
+import bambiMobile from '../public/images/bambiMobile.png';
+import bbi from '../public/images/bbi.png';
+import makoto from '../public/images/makoto.png';
 
 export const images = {
     tamirImage: tamirImage.src,
@@ -65,6 +70,11 @@ export const images = {
     cssColor: cssColor.src,
     htmlColor: htmlColor.src,
     voodoo: voodoo.src,
+    alma: alma.src,
+    bambiDesk: bambiDesk.src,
+    bambiMobile: bambiMobile.src,
+    bbi: bbi.src,
+    makoto: makoto.src,
 };
 
 export const colors = {

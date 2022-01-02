@@ -131,6 +131,54 @@ const SectionPortfolio = () => {
                         </motion.div>
                     </BoxPortfolio>
                 </ContainerBox2>
+                <ContainerBox3>
+                    <BoxPortfolio>
+                        <motion.div
+                            variants={work}
+                            animate="visible"
+                            initial="hidden"
+                        >
+                            <Link target="_blank" href="https://bambidynamic.com/" rel="noopener noreferrer" passHref>
+                                <Bambi />
+                            </Link>
+                        </motion.div>
+                    </BoxPortfolio>
+                    <BoxPortfolio>
+                        <motion.div
+                                variants={work2}
+                                animate="visible"
+                                initial="hidden"
+                        >
+                            <Link target="_blank" href="https://almabeach.co.il/" rel="noopener noreferrer" passHref>
+                                <Alma src={images.alma}/> 
+                            </Link>      
+                        </motion.div>
+                    <BoxPortfolio>
+                        <motion.div
+                                variants={work4}
+                                animate="visible"
+                                initial="hidden"
+                            >
+                            <Link target="_blank" href="https://makotorest.com/" rel="noopener noreferrer" passHref>
+                                <Makoto src={images.makoto}/> 
+                            </Link>
+                        </motion.div>
+                    </BoxPortfolio>
+                    </BoxPortfolio>
+                </ContainerBox3>
+                <ContainerBox2>
+                    <BoxPortfolio>
+                        <motion.div
+                                variants={work5}
+                                animate="visible"
+                                initial="hidden"
+                        >
+                            <Link target="_blank" href="https://bbi.org.il/" rel="noopener noreferrer" passHref>
+                                <Bbi src={images.bbi}/>   
+                            </Link>
+                        </motion.div>
+                    </BoxPortfolio>
+                </ContainerBox2>
             </ActiveContainer>
 
         </Container>
@@ -246,14 +294,13 @@ const TitleSmall = styled.div`
 
 const ContainerBox = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     justify-content: space-between;
 
     max-width: 1080px;
 
 
-    display: grid;
     grid-template-columns: repeat(2, 0fr);
     grid-template-rows: masonry;
 
@@ -280,6 +327,7 @@ const ContainerBox2 = styled.div`
 
 
     padding-top: 30px;
+    padding-bottom: 30px;
 
     @media (max-width: 690px) {
         display: flex;
@@ -287,6 +335,30 @@ const ContainerBox2 = styled.div`
 
         align-items: flex-end;
     }
+`;
+
+const ContainerBox3 = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    height: auto;
+    justify-content: space-between;
+
+    max-width: 1080px;
+
+    grid-template-columns: repeat(2, 0fr);
+    grid-template-rows: masonry;
+
+    column-gap: 30px;
+    row-gap: 30px;
+
+    @media (max-width: 690px) {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        align-items: flex-end;
+    }
+    
+
 `;
 
 const BoxPortfolio = styled.div`
@@ -432,3 +504,145 @@ const Voodoo = styled.img`
         margin-top: 30px;
     }
 `;
+
+
+
+////////////////////////////////
+
+const Bambi = styled.img`
+
+    background-image: url(${images.bambiMobile});
+    background-size: cover;
+    
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    width: 294px;
+    height: 476px;
+    display: block;
+
+    cursor: pointer;
+
+    :hover {
+        box-shadow: 0 10px 22px 0 rgba(56, 67, 97, 0.3);
+    }
+
+    @media (max-width: 1072px) {
+        width: 204px;
+        height: 453px;
+    }
+
+    @media (max-width: 768px) {
+        width: 164px;
+        height: 323px;   
+    }
+    
+
+
+    @media (max-width: 690px) {
+        background-image: url(${images.bambiDesk});
+
+        width: 260px;
+        height: 130px;
+    }
+`;
+
+
+const Alma = styled.img`
+    
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    width: 466px;
+    height: 211px;
+
+    display: block;
+
+    cursor: pointer;
+
+    :hover {
+        box-shadow: 0 10px 22px 0 rgba(56, 67, 97, 0.3);
+    }
+
+    @media (max-width: 1072px) {
+        width: 406px;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        width: 282px;
+        height: auto;   
+    }
+
+
+    @media (max-width: 690px) {
+        width: 260px;
+        height: 130px;
+    }
+`;
+
+const Bbi = styled.img`
+    
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    width: 788px;
+    height: 374px;
+
+    cursor: pointer;
+
+    :hover {
+        box-shadow: 0 10px 22px 0 rgba(56, 67, 97, 0.3);
+    }
+
+    @media (max-width: 1072px) {
+        width: 640px;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        width: 480px;
+        height: auto;   
+    }
+
+
+    @media (max-width: 690px) {
+        width: 260px;
+        height: 130px;
+    }
+    
+`;
+
+
+
+const Makoto = styled.img`
+    
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    width: 466px;
+    height: 211px;
+
+    cursor: pointer;
+
+    :hover {
+        box-shadow: 0 10px 22px 0 rgba(56, 67, 97, 0.3);
+    }
+
+    @media (max-width: 1072px) {
+        width: 406px;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        width: 282px;
+        height: auto;  
+    }
+
+    @media (max-width: 690px) {
+        width: 260px;
+        height: 130px;
+
+        margin-top: 30px;
+    }
+`;
+
