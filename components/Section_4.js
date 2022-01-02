@@ -175,7 +175,7 @@ const SomeImageCode1 = styled.img`
     }
 
     @media (max-width: 375px) {
-        height: fit-content;
+        height: 260px;
         width: auto;
     }
 `;
